@@ -178,9 +178,9 @@ input[type="number"]::-webkit-outer-spin-button {
     font: 15px/24px monospace;
     z-index: 1;
     position: absolute;
-    top: 0;
-    left: 0;
-    margin: 12px;
+    top: 19%;
+    left: 32%;
+    border: 2px solid #fff;
     border-radius: 4px;
 }
 
