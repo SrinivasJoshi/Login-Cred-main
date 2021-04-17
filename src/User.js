@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import CustomMap from "./components/CustomMap";
+import SearchMap from './components/SearchMap';
 
 function User(props) {
     const {
@@ -19,7 +20,8 @@ function User(props) {
                     <button onClick={handleLogout}>Logout</button>
                 </div>
             </nav>
-            <CustomMap />
+            {/* <CustomMap /> */}
+            <SearchMap />
             {toggle ? (
                 <div className="newpass-div">
                     <h2>Change Password</h2>
