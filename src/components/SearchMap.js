@@ -2,16 +2,16 @@ import React, { useRef, useEffect, useState } from "react";
 import mapboxgl from "mapbox-gl/dist/mapbox-gl-csp";
 // eslint-disable-next-line import/no-webpack-loader-syntax
 import MapboxWorker from 'worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker';
-
 mapboxgl.workerClass = MapboxWorker;
-mapboxgl.accessToken =
-    "pk.eyJ1IjoiYW5raXRoZWRhdSIsImEiOiJja25laW55OWkwNG4xMnFtZWNlaDByenlkIn0.FS66b1cyMaXgEuFp2n-pXQ";
+mapboxgl.accessToken ="pk.eyJ1IjoiYW5raXRoZWRhdSIsImEiOiJja25laW55OWkwNG4xMnFtZWNlaDByenlkIn0.FS66b1cyMaXgEuFp2n-pXQ";
 
-const CustomMap = () => {
+const SearchMap = () => {
     const mapContainer = useRef();
     const [lng, setLng] = useState(73.856255);
     const [lat, setLat] = useState(18.516726);
     const [zoom, setZoom] = useState(6);
+    const [mapSeen, setMapSeen] = useState(false);
+    const [search, setSearch] = useState('');
     let [info, setInfo] = useState('')
 
     useEffect(() => {
@@ -62,14 +62,17 @@ const CustomMap = () => {
         return () => map.remove();
     }, []);
 
+
     return (
-        <div className="customMap">
-            <div className="main-map">
-                <div className="sidebar">
-                    Longitude: {lng} | Latitude: {lat} | Zoom: {zoom}
-                </div>
-                <div className="map-container" ref={mapContainer} />
+        <div className="SearchMap">
+            <div className="SearchInput">
+                <input type="text" placeholder="College Address"/>
+                <button type="submit">Submit</button>
             </div>
+            
+            (<div className="customSearch">
+                <div className="map-search" ref={mapContainer} />
+            </div>)
             <div className="side-info">
                 <p>{info}</p>
             </div>
@@ -77,4 +80,4 @@ const CustomMap = () => {
     );
 };
 
-export default CustomMap;
+export default SearchMap;
