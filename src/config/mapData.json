@@ -1,0 +1,28 @@
+{
+    "colleges": [
+        {
+            "id": 1,
+            "name": "Maharashtra institute of Technology",
+            "lat": "18.5178",
+            "lon": "73.8149"
+        },
+        {
+            "id": 2,
+            "name": "Pimpri Chinchwad College Of Engineering",
+            "lat": "18.6517",
+            "lon": "73.7616"
+        },
+        {
+            "id": 3,
+            "name": "Indian Institute of Technology Bombay",
+            "lat": "19.1334",
+            "lon": "72.9133"
+        },
+        {
+            "id": 4,
+            "name": "Indian Institute of Technology Kharagpur",
+            "lat": "22.3145",
+            "lon": "87.3091"
+        }
+    ]
+}

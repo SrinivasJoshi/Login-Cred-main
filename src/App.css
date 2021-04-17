@@ -41,8 +41,8 @@
     color: #fff;
     border: 2px solid #fff;
 }
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
+input[type="number"]::-webkit-inner-spin-navbar-button,
+input[type="number"]::-webkit-outer-spin-navbar-button {
     -webkit-appearance: none;
     margin: 0;
 }
@@ -60,10 +60,10 @@ input[type="number"]::-webkit-outer-spin-button {
     border-radius: 5px;
     margin: 10px;
 }
-.two button {
+.two navbar-button {
     color: #171717;
 }
-.one button {
+.one navbar-button {
     color: #fff;
     border: 2px solid #fff;
 }
@@ -92,7 +92,7 @@ input[type="number"]::-webkit-outer-spin-button {
     color: black;
     background-color: #fff;
 }
-.hero {
+.navbar {
     width: 100%;
     min-height: 100vh;
     background: radial-gradient(
@@ -102,10 +102,10 @@ input[type="number"]::-webkit-outer-spin-button {
         rgba(17, 27, 75, 0.9) 100%
     );
 }
-.hero {
+.navbar {
     position: relative;
 }
-.hero button {
+.navbar navbar-button {
     padding: 7px 15px;
     border: none;
     outline: none;
@@ -117,8 +117,8 @@ input[type="number"]::-webkit-outer-spin-button {
     margin: 10px;
     color: aliceblue;
 }
-.hero nav {
-    position: fixed;
+.navbar nav {
+    position: sticky;
     top: 0;
     background: #603bbb;
     width: 100%;
@@ -126,18 +126,14 @@ input[type="number"]::-webkit-outer-spin-button {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    z-index: 99999;
 }
-.mapboxgl-popup-close-button {
-    position: absolute;
-    right: -41px;
-    top: -41px;
-}
-.hero .navitems {
+.navbar .navitems {
     display: flex;
     justify-content: space-evenly;
 }
 
-.hero nav h2 {
+.navbar nav h2 {
     color: #fff;
 }
 .newpass-div {
@@ -167,70 +163,47 @@ input[type="number"]::-webkit-outer-spin-button {
     letter-spacing: 1px;
     border-radius: 5px;
 }
-.customMap{
+.customMap {
     position: absolute;
     top: 25%;
     right: 25%;
     left: 25%;
     bottom: 25%;
 }
-.map-container {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-}
 
-.sidebar {
-    background-color: rgba(35, 55, 75, 0.9);
-    color: #ffffff;
-    padding:12px;
-    font: 15px/24px monospace;
-    z-index: 1;
-    position: absolute;
-    top: -20%;
-    right: 5%;
-    left: 5%;
-    margin: 12px;
-    border: 2px solid snow;
-    border-radius: 4px;
-}
-.side-info p{
-    width: 100%;
-    padding: 10px 1px;
-    background: rgba(26, 26, 27, 0.534);
-    position: absolute;
-    bottom: -20%;
-    left: 0;
-    font: 18px monospace;
-    color: snow;
-    text-align: center;
-}
 /* SEARCH  MAP */
-.SearchInput{
-    position: absolute;
-    bottom: 10%;
-    left: 50%;
-    transform: translateX(-50%);
+.SearchInput {
+    width: 450px;
+    padding: 10px;
 }
-.SearchMap input{
+.SearchMap input {
     border: 2px solid whitesmoke;
     width: 400px;
     padding: 10px;
     background: none;
-    color: whitesmoke;
     outline: none;
 }
-.SearchMap input::placeholder{
+.SearchMap input::placeholder {
     color: rgba(245, 245, 245, 0.575);
 }
-.map-search{
+.map-search {
     width: 600px;
     height: 500px;
-    position: absolute;
-    top: 15%;
-    left: 30%;
+}
+
+.map-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.customSearch {
+    padding: 10px;
+}
+
+.college-info {
+    font-size: 20px;
+    color: white;
 }
 
 /* MEDIA QUERIES */
