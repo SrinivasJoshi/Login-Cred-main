@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import CustomMap from "./components/CustomMap";
-import SearchMap from './components/SearchMap';
+import SearchMap from "./components/SearchMap";
 
 function User(props) {
     const {
@@ -12,15 +11,16 @@ function User(props) {
     } = props;
 
     return (
-        <section className="hero">
+        <section className="navbar">
             <nav>
                 <h2>Welcome</h2>
                 <div className="navitems">
-                    <button onClick={toggleDiv}>Change Password</button>
-                    <button onClick={handleLogout}>Logout</button>
+                    <navbar-button onClick={toggleDiv}>
+                        Change Password
+                    </navbar-button>
+                    <navbar-button onClick={handleLogout}>Logout</navbar-button>
                 </div>
             </nav>
-            {/* <CustomMap /> */}
             <SearchMap />
             {toggle ? (
                 <div className="newpass-div">
@@ -35,7 +35,7 @@ function User(props) {
                         placeholder="Confirm New Password"
                         onChange={(e) => setNewPassword(e.target.value)}
                     />
-                    <button onClick={resetPass}>Confirm</button>
+                    <navbar-button onClick={resetPass}>Confirm</navbar-button>
                 </div>
             ) : (
                 <p></p>
